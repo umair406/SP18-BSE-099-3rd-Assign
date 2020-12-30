@@ -4,25 +4,25 @@ var Course = require('../models/Course');
 /* GET home page. */
 router.get('/', async function (req, res, next) {
     let courses = await Course.find();
-    res.render('index', {title: 'Node JS CRUD App', courses: courses});
+    res.render('index', {title: 'Node JS Data App', courses: courses});
 });
 
 router.get('/create', function (req, res) {
-    res.render('create', {title: 'Node JS CRUD App'});
+    res.render('create', {title: 'Node JS Data App'});
 });
 
 router.post('/store', async function (req, res) {
     let course = new Course();
-    course.crName = req.body.crName;
-    course.crDuration = req.body.crDuration;
-    course.crFee = req.body.crFee;
+    course.crName = req.body.crfirstName;
+    course.crDuration = req.body.crlastName;
+    course.crFee = req.body.crPhone;
     await course.save();
     res.redirect('/');
 });
 
 router.get('/:id/edit', async function (req, res) {
     let course = await Course.findById(req.params.id);
-    res.render('edit', {title: 'Node JS CRUD App', course: course});
+    res.render('edit', {title: 'Node JS Data App', course: course});
 });
 
 router.post('/:id/update', async function (req, res) {

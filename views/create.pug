@@ -3,10 +3,10 @@ extends layout
 block content
     form(method="POST" action="store").col-md-4.mx-auto
         .form-group
-            label(for="crName") First Name
-            input(id="crName" name="crName" placeholder="Enter First Name" class="form-control" required="require")
-            label(for="crDuration") Last Name
-            input(id="crDuration" name="crDuration" placeholder="Enter Last Name" class="form-control" required="require")
+            label(for="crfirstName") First Name
+            input(id="crName" name="crfirstName" placeholder="Enter First Name" class="form-control" required="require")
+            label(for="crlastName") Last Name
+            input(id="crDuration" name="crlastName" placeholder="Enter Last Name" class="form-control" required="require")
             label(for="crFee") Phone
-            input(id="crFee" type="number" name="crFee" placeholder="Enter Phone" class="form-control" required="require")
+            input(id="crFee" type="number" name="crPhone" placeholder="Enter Phone" class="form-control" required="require")
             input(id="submit" type="submit" name="submit" value="Submit" class="btn btn-success my-3")
