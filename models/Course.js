@@ -1,9 +1,9 @@
 var mongoose = require('mongoose');
 
 var courseSchema = mongoose.Schema({
-    crName: String,
-    crDuration: String,
-    crFee: Number
+    crfirstName: String,
+    crlastName: String,
+    crPhone: Number
 });
 
 var Course = mongoose.model("Course",courseSchema);

@@ -37,7 +37,7 @@ app.use(function (err, req, res, next) {
     res.render('error');
 });
 
-mongoose.connect('mongodb+srv://umar:25121998@cluster0.7otkr.mongodb.net/crud?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://umair:1234asdf@cluster0.ew7em.mongodb.net/test', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
