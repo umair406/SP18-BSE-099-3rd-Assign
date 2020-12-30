@@ -13,9 +13,9 @@ router.get('/create', function (req, res) {
 
 router.post('/store', async function (req, res) {
     let course = new Course();
-    course.crName = req.body.crfirstName;
-    course.crDuration = req.body.crlastName;
-    course.crFee = req.body.crPhone;
+    course.crfirstName = req.body.crfirstName;
+    course.crlastName = req.body.crlastName;
+    course.crPhone = req.body.crPhone;
     await course.save();
     res.redirect('/');
 });
